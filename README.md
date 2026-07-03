@@ -2,9 +2,10 @@
 
 A full-stack ticket booking platform for movies and concerts. Features real-time seat map, seat hold with TTL auto-release, waitlist with automatic seat assignment on cancellation, and QR code ticket generation with email delivery.
 
-## Live Application Link
-- **Frontend App**: [https://ticket-booking-system-sigma-liard.vercel.app](https://ticket-booking-system-sigma-liard.vercel.app)
+### 🌐 Live Deployment
+- **Frontend App**: [https://ticket-booking-system-sigma-liard.vercel.app/](https://ticket-booking-system-sigma-liard.vercel.app/)
 - **Backend API**: [https://ticket-booking-system-1mwl.onrender.com](https://ticket-booking-system-1mwl.onrender.com)
+
 
 ## Features
 
@@ -96,7 +97,6 @@ App runs at `http://localhost:5173`, API at `http://localhost:5000`.
 |--------|----------|-------------|------|
 | POST | `/api/auth/register` | Register user | No |
 | POST | `/api/auth/login` | Login | No |
-| GET | `/api/auth/me` | Get profile | Yes |
 
 **Register body:**
 ```json
@@ -109,8 +109,6 @@ App runs at `http://localhost:5173`, API at `http://localhost:5000`.
 | POST | `/api/venues` | Create venue |
 | GET | `/api/venues` | List venues |
 | GET | `/api/venues/:id` | Get venue |
-| PUT | `/api/venues/:id` | Update venue |
-| DELETE | `/api/venues/:id` | Delete venue |
 
 **Create venue body:**
 ```json
