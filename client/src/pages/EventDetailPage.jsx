@@ -36,7 +36,10 @@ export default function EventDetailPage() {
 
   // real-time seat updates via socket
   useEffect(() => {
-    const socket = io(window.location.origin);
+    const socketUrl = import.meta.env.VITE_API_URL 
+      ? import.meta.env.VITE_API_URL.replace('/api', '') 
+      : window.location.origin;
+    const socket = io(socketUrl);
     socketRef.current = socket;
     socket.emit('join:event', id);
 
