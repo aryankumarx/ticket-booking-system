@@ -2,6 +2,10 @@
 
 A full-stack ticket booking platform for movies and concerts. Features real-time seat map, seat hold with TTL auto-release, waitlist with automatic seat assignment on cancellation, and QR code ticket generation with email delivery.
 
+## Live Application Link
+- **Frontend App**: [https://ticket-booking-system-sigma-liard.vercel.app](https://ticket-booking-system-sigma-liard.vercel.app)
+- **Backend API**: [https://ticket-booking-system-1mwl.onrender.com](https://ticket-booking-system-1mwl.onrender.com)
+
 ## Features
 
 - **Role-based Auth** — Customer, Organiser, Admin with JWT
