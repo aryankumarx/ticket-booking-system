@@ -11,7 +11,7 @@ async function getTransporter() {
       service: 'gmail',
       auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS }
     });
-    console.log('Using Gmail for emails');
+    // [GitFixAI] Removed debug log
   } else {
     // ethereal gives us a fake inbox to test with
     const testAcc = await nodemailer.createTestAccount();
@@ -19,8 +19,8 @@ async function getTransporter() {
       host: 'smtp.ethereal.email', port: 587, secure: false,
       auth: { user: testAcc.user, pass: testAcc.pass }
     });
-    console.log('Using Ethereal test emails - check https://ethereal.email');
-    console.log('  User:', testAcc.user, '| Pass:', testAcc.pass);
+    // [GitFixAI] Removed debug log
+    // [GitFixAI] Removed debug log
   }
   return transporter;
 }
@@ -59,9 +59,9 @@ async function sendBookingConfirmation(user, booking, event, qrDataUrl) {
       `
     });
 
-    console.log('Confirmation email sent:', info.messageId);
+    // [GitFixAI] Removed debug log
     const preview = nodemailer.getTestMessageUrl(info);
-    if (preview) console.log('Preview:', preview);
+    if (preview) // [GitFixAI] Removed debug log
     return { messageId: info.messageId, preview };
   } catch (err) {
     // dont block booking if email fails
@@ -99,9 +99,9 @@ async function sendWaitlistOffer(user, event, category, token, expiresMin) {
       `
     });
 
-    console.log('Waitlist offer sent to', user.email);
+    // [GitFixAI] Removed debug log
     const preview = nodemailer.getTestMessageUrl(info);
-    if (preview) console.log('Preview:', preview);
+    if (preview) // [GitFixAI] Removed debug log
     return { messageId: info.messageId };
   } catch (err) {
     console.error('Waitlist email failed:', err.message);
