@@ -15,7 +15,7 @@ function initScheduler(io) {
     catch (e) { console.error('Offer expiry error:', e.message); }
   });
 
-  console.log('Scheduler started - monitoring seat holds & waitlist offers');
+  // [GitFixAI] Removed debug log
 }
 
 module.exports = { initScheduler };
