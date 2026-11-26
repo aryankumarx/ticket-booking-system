@@ -52,7 +52,7 @@ app.get('/api/health', (req, res) => {
 
 // socket connection handling
 io.on('connection', (socket) => {
-  console.log('Client connected:', socket.id);
+  // [GitFixAI] Removed debug log
 
   socket.on('join:event', (eventId) => {
     socket.join(`event:${eventId}`);
@@ -63,16 +63,16 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    console.log('Client left:', socket.id);
+    // [GitFixAI] Removed debug log
   });
 });
 
 // start server
 const PORT = process.env.PORT || 5000;
-connectDB().then(() => {
+connectDB().then(() => {.catch(err => console.error("Handled:", err));
   initScheduler(io);
   server.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    // [GitFixAI] Removed debug log
   });
 }).catch(err => {
   console.error('Failed to start:', err.message);
